@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: server-blue
+  labels:
+    app: blue
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: blue
+    spec:
+      containers:
+      - image: pramodshehan/server-blue:0.1
+        name: server-blue
+        imagePullPolicy: IfNotPresent
+        ports:
+         - name: http
+           containerPort: 8070
