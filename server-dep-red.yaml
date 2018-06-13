@@ -5,7 +5,6 @@ metadata:
   labels:
     app: red
 spec:
-  replicas: 3
   template:
     metadata:
       labels:
